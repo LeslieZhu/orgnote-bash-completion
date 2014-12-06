@@ -1,52 +1,39 @@
-Pip Bash Completion
+OrgNote Bash Completion
 ===================
 
-Bash autocompletion for [pip](https://github.com/pypa/pip).
+Bash autocompletion for [OrgNote](https://github.com/LeslieZhu/OrgNote).
 
 
 ## Installation
 
 Global:
 
-    $ git clone git://github.com/ekalinin/pip-bash-completion.git
-    $ sudo cp ./pip-bash-completion/pip /etc/bash_completion.d/
-    $ . /etc/bash_completion.d/pip
+    $ git clone git@github.com:LeslieZhu/orgnote-bash-completion.git
+    $ sudo cp ./orgnote-bash-completion/orgnote /etc/bash_completion.d/
+    $ . /etc/bash_completion.d/orgnote
 
 
 Local:
 
     $ ~/bash_completion.d
-    $ cp ./pip-bash-completion/pip ~/bash_completion.d/
+    $ cp ./orgnote-bash-completion/orgnote ~/bash_completion.d/
     $ echo "" >> ~/.bashrc
-    $ echo 'if [ -f "$HOME/bash_completion.d/pip" ] ; then' >> ~/.bashrc
-    $ echo '    . $HOME/bash_completion.d/pip' >> ~/.bashrc
+    $ echo 'if [ -f "$HOME/bash_completion.d/orgnote" ] ; then' >> ~/.bashrc
+    $ echo '    . $HOME/bash_completion.d/orgnote' >> ~/.bashrc
     $ echo "fi" >> ~/.bashrc
-    $ . ~/bash_completion.d/pip
+    $ . ~/bash_completion.d/orgnote
 
 
 ## Usage
 
 
-To list pip's commands:
+To list orgnote's commands:
 
-    $ pip [TAB]
-    bundle     freeze     help       install    search     uninstall  unzip      zip
+    $ orgnote [TAB]
+    init new list status publish generate server deploy help version
 
 
 To complete command:
 
-    $ pip i[TAB]
-    $ pip install
-
-
-To list pip's options for commands:
-
-    $ pip install -[TAB][TAB]
-    -b                     --download-cache=      -f                     -I                     --mirrors=             --pypi-url=            --source-directory=    --user
-    --build=               --download-dir=        --find-links           --ignore-installed     --no-dependencies      -q                     --src=                 -v
-    --build-dir=           --download-directory=  --find-links=          --index-url            --no-deps              --quiet                -t                     --verbose
-    --build-directory=     -e                     --force-reinstall      --index-url=           --no-download          -r                     --target=              --version
-    -c                     --editable             --global-option=       --install-             --no-index             --requirement=         --timeout=
-    -d                     --editable=            -h                     --install-option=      --no-install           -s                     -U
-    --default-timeout=     --exists-action=       --help                 --log=                 -p                     --source=              --upgrade
-    --download=            --extra-index-url=     -i                     -M                     --proxy=               --source-dir=          --use-mirrors
+    $ orgnote i[TAB]
+    $ orgnote init
