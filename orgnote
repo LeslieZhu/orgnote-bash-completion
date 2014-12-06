@@ -1,11 +1,11 @@
 
-_pip() {
+_orgnote() {
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
     first="${COMP_WORDS[0]}"
 
     commands=$($first --help | awk '/Commands\:/,/General Options\:/' | \
-               \grep -E -o "^\s{2}\w+" | tr -d ' ')
+               \grep -E -o "^\s{4}\w+" | egrep -v "Commands|For" | tr -d ' ')
     opts=$($first --help | \grep -E -o "((-\w{1}|--(\w|-)*=?)){1,2}")
 
 
@@ -22,8 +22,8 @@ _pip() {
     fi
 }
 
-complete -o default -F _pip pip
-complete -o default -F _pip pip2
-complete -o default -F _pip pip3
+complete -o default -F _orgnote orgnote
+complete -o default -F _orgnote orgnote2
+complete -o default -F _orgnote orgnote2.7
 
 # /* vim: set filetype=sh : */
