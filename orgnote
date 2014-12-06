@@ -4,10 +4,9 @@ _orgnote() {
     prev="${COMP_WORDS[COMP_CWORD-1]}"
     first="${COMP_WORDS[0]}"
 
-    commands=$($first --help | awk '/Commands\:/,/General Options\:/' | \
-               \grep -E -o "^\s{4}\w+" | egrep -v "Commands|For" | tr -d ' ')
+    commands=$($first --help | awk '/Commands\:/,/version/' | \
+               \grep -E -o "^\s{2}\w+" | tr -d ' ')
     opts=$($first --help | \grep -E -o "((-\w{1}|--(\w|-)*=?)){1,2}")
-
 
     if [ $COMP_CWORD == 1 ] ; then
         COMPREPLY=( $(compgen -W "${commands}" -- ${cur}) )

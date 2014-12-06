@@ -15,7 +15,7 @@ Global:
 
 Local:
 
-    $ ~/bash_completion.d
+    $ mkdir -p ~/bash_completion.d
     $ cp ./orgnote-bash-completion/orgnote ~/bash_completion.d/
     $ echo "" >> ~/.bashrc
     $ echo 'if [ -f "$HOME/bash_completion.d/orgnote" ] ; then' >> ~/.bashrc
